@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap'); /* Import-ваме шрифт*/
+*{ /* Настройки за цялата страница*/
+    background-color: #222; /* сетваме фон */  
+    font-family: 'Merriweather', serif; /* сетваме шрифт */
+}
+Header{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.Links a{
+    text-decoration: none;
+    color: #fff;
+    margin: 20px;
+    font-size: 20px;
+    transition: 2s;
+}
+.Links a:hover{ /* Настройки за линковете при hover */
+    color: #e0f74b; /* Задава цвят на линковете*/
+    transition: 2s; /* Задава време за изпълнение*/
+    
+}
