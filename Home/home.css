@@ -1,23 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap'); /* Import-ваме шрифт*/
-*{ /* Настройки за цялата страница*/
-    background-color: #222; /* сетваме фон */  
-    font-family: 'Merriweather', serif; /* сетваме шрифт */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+/* Import-ваме шрифт*/
+* {
+    /* Настройки за цялата страница*/
+    background-color: #222;
+    /* сетваме фон */
+    font-family: 'Merriweather', serif;
+    /* сетваме шрифт */
 }
-Header{
+
+Header {
     display: flex;
     text-align: center;
     justify-content: space-between;
     align-items: center;
 }
-.Links a{
+
+.Links a {
     text-decoration: none;
     color: #fff;
     margin: 20px;
     font-size: 20px;
-    transition: 2s;
 }
-.Links a:hover{ /* Настройки за линковете при hover */
-    color: #e0f74b; /* Задава цвят на линковете*/
-    transition: 2s; /* Задава време за изпълнение*/
-    
+
+.Links a:hover {
+    /* Настройки за линковете при hover */
+    color: #e0f74b;
+    /* Задава цвят на линковете*/
+    transition: 0.5s;
+    /* Задава време за изпълнение*/
+
+}
+
+.image-container {
+    position: relative;
+    margin-bottom: 110px;
+    padding-right: 100px;
+}
+
+.original-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-container:hover .hover-image {
+    opacity: 1;
+}
+
+.image-container:hover .original-image {
+    opacity: 0;
 }
