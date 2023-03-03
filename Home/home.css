@@ -6,6 +6,7 @@
 }
 
 Header {
+    position: relative;
     display: flex;
     text-align: center;
     justify-content: space-between;
@@ -40,4 +41,14 @@ Header {
     height: 100%;
     z-index: -1;
     filter: brightness(25%);
+}
+
+.home{
+    position: absolute;
+}
+.catalog{
+    position: absolute;
+}
+.about{
+    position: absolute;
 }
