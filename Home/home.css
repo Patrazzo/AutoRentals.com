@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
-
-/* Import-ваме шрифт*/
 * {
-    /* Настройки за цялата страница*/
-    background-color: #222;
-    /* сетваме фон */
+    background-color: transparent;
     font-family: 'Merriweather', serif;
-    /* сетваме шрифт */
+    margin: 0%;
 }
 
 Header {
@@ -14,6 +10,7 @@ Header {
     text-align: center;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .Links a {
@@ -24,41 +21,23 @@ Header {
 }
 
 .Links a:hover {
-    /* Настройки за линковете при hover */
     color: #e0f74b;
-    /* Задава цвят на линковете*/
     transition: 0.5s;
-    /* Задава време за изпълнение*/
-
 }
 
-.image-container {
-    position: relative;
-    margin-bottom: 110px;
-    padding-right: 100px;
-}
-
-.original-image {
+.Background{
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.hover-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.image-container:hover .hover-image {
-    opacity: 1;
-}
-
-.image-container:hover .original-image {
-    opacity: 0;
+.Background video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(25%);
 }
